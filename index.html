@@ -1,8 +1,210 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sample HTML Page</title>
-        </head>
+<head>
+    <title>World Capitals</title>
+    <style>
+       
+        body {
+            background-color: teal;
+            font-family: Arial, sans-serif;
+        }
+
+        .city, .city1, .city2, .city3, .city4, .city5, .city6, .city7, .city8 {
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .city { background-color: tomato; }
+        .city1 { background-color: blueviolet; }
+        .city2 { background-color: gold; }
+        .city3 { background-color: pink; }
+        .city4 { background-color: palegreen; }
+        .city5 { background-color: paleturquoise; }
+        .city6 { background-color: peru; }
+        .city7 { background-color: powderblue; }
+        .city8 { background-color: gray; }
+
+        
+        .red {
+            background-color: blue;
+            padding: 10px;
+            margin: 40px;
+            border: 2px solid rgb(1, 73, 46);
+            border-radius: 8px;
+        }
+
+        .green {
+            background-color: green;
+            margin: 40px;
+            padding: 10px;
+            border: 3px solid silver;
+            border-radius: 8px;
+        }
+
+        .black {
+            background-color: black;
+            padding: 10px;
+            margin: 40px;
+            border: 4px solid sienna;
+            border-radius: 8px;
+        }
+
+        .white {
+            background-color: wheat;
+            padding: 10px;
+            margin: 40px;
+            border: 5px solid salmon;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .calculator-section {
+            background-color: #008080;
+            margin: 40px;
+            padding: 20px;
+            border: 3px solid #004d4d;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .calculator-section h2 {
+            color: white;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .calculator-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        #result {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 18px;
+            color: #333;
+            min-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <body style="background-color:teal;">
+
+
+<div class= "red">
+    <div class="city">
+    <h2>London</h2>
+    <p>London is the capital of England.</p>[]
+    </div>
+    
+    <div class="city1">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p>
+    </div>
+    <button onclick="changeFontSize()">Change Font Size</button>
+</div>
+
+<div class="green">
+    <div class="city2">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <div class="city3">
+    <h2>Kathmandu</h2>
+    <p>Kathmandu is the capital of Nepal.</p>
+    </div>
+    <button onclick="changeStyle()">Change Font Style</button>
+</div>
+<div class="black">
+    <div class="city4" id="city4">
+    <h2>New Delhi</h2>
+    <p>New Delhi is the capital of India.</p>
+    </div>
+
+    <div class="city5">
+    <h2>Beijing</h2>
+    <p>Beijing is the capital of China.</p>
+    </div>
+    <button onclick="changeImage()">Change Background Image</button>
+</div>
+
+<div class="white">
+    <div class="city6">
+    <h2>Thimphu</h2>
+    <p>Thimphu is the capital of Bhutan.</p>
+    </div>
+
+    <div class="city7">
+    <h2>Brasilia</h2>
+    <p>Brasilia is the capital of Brazil.</p>
+    </div>
+    <button onclick="addText()">Add Text</button>
+</div>
+<div class="calculator-section">
+        <h2>Calculator Operations</h2>
+        <div id="result"></div>
+        <div class="calculator-buttons">
+            <button onclick="displaySum()">Display Sum</button>
+            <button onclick="displaySubtraction()">Display Subtraction</button>
+            <button onclick="displayMultiplication()">Display Multiplication</button>
+            <button onclick="displayDivision()">Display Division</button>
+        </div>
+    </div>
+    <div>
+        <button onclick="checkGrade()">Check Grade</button>
+    </div>
+<script>
+  function changeFontSize() {
+    const cities = document.querySelectorAll('.city, .city1');
+    cities.forEach(city => {
+        city.style.fontSize = '20px';
+    });
+  }
+
+  function changeStyle() {
+    const cities = document.querySelectorAll('.city2, .city3');
+    cities.forEach(city => {
+        city.style.fontFamily = 'Arial, sans-serif';
+        city.style.fontWeight = 'bold';
+    });
+  }
+
+  function changeImage() {
+    const cityElement = document.querySelector('.city4');
+    cityElement.style.backgroundImage = 'url("29b3585f37c14cd1862f9e9c352891ab-2211561640.webp")';
+    cityElement.style.backgroundSize = 'cover';
+    cityElement.style.backgroundPosition = 'center';
+  }
+
+  function addText() {
+    const city = document.querySelector('.city7');
+    const newParagraph = document.createElement('p');
+    newParagraph.textContent = 'Welcome to Brasilia, the vibrant capital of Brazil!';
+    city.appendChild(newParagraph);
+  }
+</script>
+<script src="sum.js"></script>
+<script src="ifelse.js"></script>
+</body>
 </html>
