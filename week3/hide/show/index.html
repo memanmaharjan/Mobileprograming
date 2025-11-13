@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>jQuery Hide/Show Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery Hide/Show Demo</h1>
+        
+        <div class="button-controls">
+            <button id="showBtn">Show Content</button>
+            <button id="hideBtn" style="display: none;">Hide Content</button>
+        </div>
+
+        <div id="contentBox" style="display: none;">
+            <h2>Interactive Content Box</h2>
+            <p>This box has different mouse events!</p>
+            
+            <div class="event-box" id="box1">
+                <h3>Box 1 - Mouse Enter</h3>
+                <p>Hover over me!</p>
+            </div>
+
+            <div class="event-box" id="box2">
+                <h3>Box 2 - Mouse Leave</h3>
+                <p>Hover and leave me!</p>
+            </div>
+
+            <div class="event-box" id="box3">
+                <h3>Box 3 - Click Event</h3>
+                <p>Click me!</p>
+            </div>
+
+            <div class="event-box" id="box4">
+                <h3>Box 4 - Double Click</h3>
+                <p>Double click me!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery.js"></script>
+</body>
+</html>
