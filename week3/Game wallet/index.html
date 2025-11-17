@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GameWallet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div id="hamburger">&#9776;</div>
+        <h1>GameWallet</h1>
+    </div>
+
+    <div id="menu" class="menu">
+        <a href="#">Home</a>
+        <a href="#">Add Purchase</a>
+        <a href="#">History</a>
+    </div>
+
+    <div class="container">
+        <h2 id="totalText">Total Spent: Rs 0</h2>
+
+        <button id="addBtn" class="btn">Add Purchase</button>
+
+        <div id="form" class="form">
+            <input type="text" id="game" placeholder="Game Name">
+            <input type="text" id="item" placeholder="Item Bought">
+            <input type="number" id="amount" placeholder="Amount (Rs)">
+            <button id="saveBtn" class="btn">Save</button>
+        </div>
+        <h3>Purchase History</h3>
+        <ul id="history"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
