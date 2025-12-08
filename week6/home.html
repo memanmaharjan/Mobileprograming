@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Firebase</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <script type="module" src="form.js"></script>
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+
+    <!-- User Form -->
+    <div class="card shadow p-4 mb-4">
+      <form id="userForm">
+        <div class="row g-3">
+          <div class="col-md-5">
+            <input type="text" class="form-control" id="name" placeholder="Enter name" required />
+          </div>
+          <div class="col-md-5">
+            <input type="email" class="form-control" id="email" placeholder="Enter email" required />
+          </div>
+          <input type="hidden" id="userId" />
+          <div class="col-md-2 d-grid">
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+          <div class="row g-3 mt-2">
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="address" placeholder="Enter address" />
+            </div>
+            <div class="col-md-4">
+              <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" />
+            </div>
+            <div class="col-md-2 d-grid">
+              <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+      </form>
+    </div>
+
+    <!-- User Table -->
+    <div class="card shadow p-4">
+      <h4 class="mb-3">Users List</h4>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover table-striped align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>
